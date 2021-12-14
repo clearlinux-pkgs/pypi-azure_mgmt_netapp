@@ -4,7 +4,7 @@
 #
 Name     : pypi-azure_mgmt_netapp
 Version  : 5.1.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/aa/01/566bdba5bd0f7eef7ff4e4a14de6a0096dd114e4df4bea6cbd4d3ccf568d/azure-mgmt-netapp-5.1.0.zip
 Source0  : https://files.pythonhosted.org/packages/aa/01/566bdba5bd0f7eef7ff4e4a14de6a0096dd114e4df4bea6cbd4d3ccf568d/azure-mgmt-netapp-5.1.0.zip
 Summary  : Microsoft Azure NetApp Files Management Client Library for Python
