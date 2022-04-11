@@ -4,7 +4,7 @@
 #
 Name     : pypi-azure_mgmt_netapp
 Version  : 7.0.0
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/f3/6c/17bb637577121e09a8b14db5448f3cb7c4d5f9b78f597de68ee68642f334/azure-mgmt-netapp-7.0.0.zip
 Source0  : https://files.pythonhosted.org/packages/f3/6c/17bb637577121e09a8b14db5448f3cb7c4d5f9b78f597de68ee68642f334/azure-mgmt-netapp-7.0.0.zip
 Summary  : Microsoft Azure NetApp Files Management Client Library for Python
@@ -61,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1647354881
+export SOURCE_DATE_EPOCH=1649715913
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
