@@ -4,7 +4,7 @@
 #
 Name     : pypi-azure_mgmt_netapp
 Version  : 8.0.0
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/16/88/a7fcfd24d681b97000a3531371f3629904650cdd54e19dd0ac7b631af402/azure-mgmt-netapp-8.0.0.zip
 Source0  : https://files.pythonhosted.org/packages/16/88/a7fcfd24d681b97000a3531371f3629904650cdd54e19dd0ac7b631af402/azure-mgmt-netapp-8.0.0.zip
 Summary  : Microsoft Azure NetApp Files Management Client Library for Python
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1655393254
+export SOURCE_DATE_EPOCH=1656359900
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,7 +102,7 @@ export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 python3 -tt setup.py build install --root=%{buildroot}-v3
 popd
-/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
