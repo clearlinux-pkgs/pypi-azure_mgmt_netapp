@@ -1,5 +1,5 @@
 PKG_NAME := pypi-azure_mgmt_netapp
-URL = https://files.pythonhosted.org/packages/16/88/a7fcfd24d681b97000a3531371f3629904650cdd54e19dd0ac7b631af402/azure-mgmt-netapp-8.0.0.zip
+URL = https://files.pythonhosted.org/packages/70/79/4f5345ee755d4304a1a16ffeb0b75f6971387b1be8a0d5ffeb0d846a9e76/azure-mgmt-netapp-8.1.0.zip
 ARCHIVES = 
 
 include ../common/Makefile.common
