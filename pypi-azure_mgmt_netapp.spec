@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-azure_mgmt_netapp
-Version  : 10.0.0
-Release  : 22
-URL      : https://files.pythonhosted.org/packages/ee/bd/82e8ee14fa61db2ef53aafb8f5b31efcc7748cae851f5c0567afb1903a2d/azure-mgmt-netapp-10.0.0.zip
-Source0  : https://files.pythonhosted.org/packages/ee/bd/82e8ee14fa61db2ef53aafb8f5b31efcc7748cae851f5c0567afb1903a2d/azure-mgmt-netapp-10.0.0.zip
+Version  : 10.1.0
+Release  : 23
+URL      : https://files.pythonhosted.org/packages/0f/f2/074f7ddf5e62b5853b88483fcdc5bd5acb12ae16d98aa910c8e57132f1f3/azure-mgmt-netapp-10.1.0.zip
+Source0  : https://files.pythonhosted.org/packages/0f/f2/074f7ddf5e62b5853b88483fcdc5bd5acb12ae16d98aa910c8e57132f1f3/azure-mgmt-netapp-10.1.0.zip
 Summary  : Microsoft Azure NetApp Files Management Client Library for Python
 Group    : Development/Tools
 License  : MIT
@@ -17,7 +17,7 @@ Requires: pypi-azure_mgmt_netapp-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(azure_common)
 BuildRequires : pypi(azure_mgmt_core)
-BuildRequires : pypi(msrest)
+BuildRequires : pypi(isodate)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -52,17 +52,17 @@ Requires: python3-core
 Provides: pypi(azure_mgmt_netapp)
 Requires: pypi(azure_common)
 Requires: pypi(azure_mgmt_core)
-Requires: pypi(msrest)
+Requires: pypi(isodate)
 
 %description python3
 python3 components for the pypi-azure_mgmt_netapp package.
 
 
 %prep
-%setup -q -n azure-mgmt-netapp-10.0.0
-cd %{_builddir}/azure-mgmt-netapp-10.0.0
+%setup -q -n azure-mgmt-netapp-10.1.0
+cd %{_builddir}/azure-mgmt-netapp-10.1.0
 pushd ..
-cp -a azure-mgmt-netapp-10.0.0 buildavx2
+cp -a azure-mgmt-netapp-10.1.0 buildavx2
 popd
 
 %build
@@ -70,15 +70,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682002358
+export SOURCE_DATE_EPOCH=1690210047
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
